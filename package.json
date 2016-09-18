@@ -1,0 +1,20 @@
+{
+  "name": "deborahsteele.info",
+  "private": true,
+  "version": "0.0.1",
+  "description": "Website for deborahsteele.info",
+  "main": "build.js",
+  "scripts": {
+    "test": "taper test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/debsteele/deborahsteele.info.git"
+  },
+  "author": "Deborah Steele",
+  "license": "",
+  "bugs": {
+    "url": "https://github.com/debsteele/deborahsteele.info/issues"
+  },
+  "homepage": "https://deborahsteele.info"
+}
