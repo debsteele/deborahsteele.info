@@ -1,0 +1,43 @@
+<footer>
+    {{!-- Has id to ensure main menu works on pages without a submenu --}}
+    <div id="nuxeo-submenu" class="row small-up-1 medium-up-3">
+
+    </div>
+
+    <div class="row small-up-2">
+        <div class="column copyright">
+            Copyright &copy; {{moment format='YYYY'}} Nuxeo
+            <br>
+            <a href="http://www.nuxeo.com/privacy-policy">Privacy Policy</a>
+        </div>
+        <div class="column text-right social">
+            <a href="{{site.linkedin}}">
+                <span class="fa-stack fa-lg">
+                    <i class="fa fa-circle fa-stack-2x"></i>
+                    <i class="fa fa-linkedin fa-stack-1x fa-inverse"></i>
+                </span>
+            </a>
+            <a href="{{site.twitter}}">
+                <span class="fa-stack fa-lg">
+                    <i class="fa fa-circle fa-stack-2x"></i>
+                    <i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
+                </span>
+            </a>
+            <a href="{{site.researchgate}}">
+                <span class="fa-stack fa-lg">
+                    <i class="fa fa-circle fa-stack-2x"></i>
+                    <i class="fa fa-google-plus fa-stack-1x fa-inverse"></i>
+                </span>
+            </a>
+        </div>
+    </div>
+</footer>
+
+<script type="text/javascript" src="/assets/js/jquery.min.js"></script>
+<script type="text/javascript" src="/assets/js/motion-ui.min.js"></script>
+<script type="text/javascript" src="/assets/js/foundation.min.js"></script>
+<script type="text/javascript" src="/assets/js/site.js"></script>
+
+{{#if script}}
+<script type="text/javascript" src="/assets/js/{{script}}.js"></script>
+{{/if}}

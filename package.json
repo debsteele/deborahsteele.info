@@ -3,9 +3,35 @@
   "private": true,
   "version": "0.0.1",
   "description": "Website for deborahsteele.info",
+  "os": [
+    "!win32"
+  ],
+  "engines": {
+    "node": ">=6.5"
+  },
+  "config": {
+    "browser": "chromium-browser"
+  },
   "main": "build.js",
   "scripts": {
-    "test": "taper test"
+    "prestart": "npm run compile",
+    "start": "node .",
+    "poststart": "cp -r ./assets ./site && npm run test",
+    "test": "taper test",
+    "posttest": "npm run lint && npm run verify",
+    "verify": "taper verify",
+    "lint": "npm run lint_js && npm run lint_scss",
+    "lint_js": "eslint --ignore-pattern node_modules --ignore-pattern site/ --ignore-pattern assets/js/ *.js **/*.js",
+    "lint_scss": "sass-lint -qv",
+    "compile": "npm run css_needs_build && ./compile_assets.sh && npm run build_css_postcss",
+    "copy_fontawesome": "find ./node_modules/font-awesome/fonts/* -maxdepth 0 -type f -exec cp \"{}\" ./assets/fonts/ \\;",
+    "css_needs_build": "[ `npm run -s scss_checksum` = `cat scss.csum` ] || npm run build_css && npm run -s scss_checksum > scss.csum",
+    "prebuild_css": "ls ./assets/fonts > /dev/null || mkdir -p ./assets/fonts && npm run copy_fontawesome && rm -rf ./client/css/*",
+    "build_css": "node-sass --source-map true --source-map-contents --include-path ./client/scss/ --include-path ./node_modules/foundation-sites/scss/ --include-path ./node_modules/motion-ui/src --include-path ./node_modules/font-awesome/scss --output-style compressed --output ./client/css/ ./client/scss/",
+    "build_css_postcss": "postcss --use autoprefixer -c postcss.json -d assets/css/`cat scss.csum` client/css/*.css",
+    "scss_checksum": "find client/scss -type f \\( -exec md5sum \"$PWD\"/{} \\; \\) | md5sum | grep -oE '^[a-zA-Z0-9]+'",
+    "browser_sync": "browser-sync start --server site --browser=$npm_package_config_browser",
+    "browser_reload": "browser-sync reload"
   },
   "repository": {
     "type": "git",
@@ -16,5 +42,23 @@
   "bugs": {
     "url": "https://github.com/debsteele/deborahsteele.info/issues"
   },
-  "homepage": "https://deborahsteele.info"
+  "homepage": "https://deborahsteele.info",
+  "devDependencies": {
+    "browser-sync": "^2.16.0",
+    "eslint": "^3.5.0",
+    "sass-lint": "^1.9.1",
+    "tape": "^4.6.0",
+    "taper": "^0.5.0"
+  },
+  "dependencies": {
+    "debug": "^2.2.0",
+    "handlebars": "^4.0.5",
+    "metalsmith": "^2.2.0",
+    "metalsmith-default-values": "^1.0.1",
+    "metalsmith-layouts": "^1.6.5",
+    "metalsmith-markdown": "^0.2.1",
+    "metalsmith-permalinks": "^0.5.0",
+    "motion-ui": "^1.2.2",
+    "node-yaml-config": "0.0.4"
+  }
 }
