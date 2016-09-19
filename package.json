@@ -30,8 +30,10 @@
     "build_css": "node-sass --source-map true --source-map-contents --include-path ./client/scss/ --include-path ./node_modules/foundation-sites/scss/ --include-path ./node_modules/motion-ui/src --include-path ./node_modules/font-awesome/scss --output-style compressed --output ./client/css/ ./client/scss/",
     "build_css_postcss": "postcss --use autoprefixer -c postcss.json -d assets/css/`cat scss.csum` client/css/*.css",
     "scss_checksum": "find client/scss -type f \\( -exec md5sum \"$PWD\"/{} \\; \\) | md5sum | grep -oE '^[a-zA-Z0-9]+'",
+    "predev": "npm install --silent --progress=false",
+    "dev": "npm run browser_sync & NODE_ENV=development nodemon --exec 'npm start && npm run browser_sync_reload'",
     "browser_sync": "browser-sync start --server site --browser=$npm_package_config_browser",
-    "browser_reload": "browser-sync reload"
+    "browser_sync_reload": "browser-sync reload"
   },
   "repository": {
     "type": "git",
@@ -46,6 +48,7 @@
   "devDependencies": {
     "browser-sync": "^2.16.0",
     "eslint": "^3.5.0",
+    "nodemon": "^1.10.2",
     "sass-lint": "^1.9.1",
     "tape": "^4.6.0",
     "taper": "^0.5.0"
