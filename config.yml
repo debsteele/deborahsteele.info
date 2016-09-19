@@ -1,0 +1,17 @@
+default:
+    site:
+        # Standard Site Configuration
+        url: https://deborahsteele.info
+        name: Deborah Steele
+        twitter: DJSalgae
+
+        # For RSS feeds
+        title: 'Deborah Steele'
+        author: 'Deborah Steele'
+    page_defaults:
+        -
+            pattern: ["*.{md,html}", "**/*.{md,html}"]
+            defaults:
+                layout: default.hbs
+development:
+    isDev: true

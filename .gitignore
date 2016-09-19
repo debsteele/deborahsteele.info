@@ -35,3 +35,12 @@ jspm_packages
 
 # Optional REPL history
 .node_repl_history
+
+# build directories
+scss.csum
+/client/css
+/assets/fonts/fontawesome*
+/assets/fonts/FontAwesome*
+/assets/css/**
+/assets/js
+/site
