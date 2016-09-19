@@ -54,8 +54,10 @@
     "taper": "^0.5.0"
   },
   "dependencies": {
+    "autoprefixer": "^6.4.1",
     "debug": "^2.2.0",
     "font-awesome": "^4.6.3",
+    "foundation-sites": "^6.2.3",
     "handlebars": "^4.0.5",
     "metalsmith": "^2.2.0",
     "metalsmith-default-values": "^1.0.1",
@@ -64,6 +66,7 @@
     "metalsmith-permalinks": "^0.5.0",
     "motion-ui": "^1.2.2",
     "node-sass": "^3.10.0",
-    "node-yaml-config": "0.0.4"
+    "node-yaml-config": "0.0.4",
+    "postcss-cli": "^2.6.0"
   }
 }
