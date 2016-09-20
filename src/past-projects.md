@@ -2,7 +2,7 @@
 title: Past Projects
 
 ---
-## Chlorophyll alteration products
+## Chlorophyll Alterations
 
 
-## Algal responses to stress
+## Algal Responses to Stress
