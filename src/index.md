@@ -2,7 +2,7 @@
 title: Welcome
 
 ---
-I am a [**marine microbiologist**](/marine-microbiology), [**LC-MS specialist**](/LC-MS) and [**algae enthusiast**](/algae). Currently a postdoctoral fellow at the [Millennium Institute of Oceanography](http://en.imo-chile.cl/), Chile. I use experimental methods and in-situ measurements to investigate the responses of algae to stressful environments, and to calssify and quantify phytoplankton assemblages.
+I am a [**marine microbiologist**](/marine-microbiology), [**LC-MS specialist**](/lc-ms) and [**algae enthusiast**](/algae). Currently a postdoctoral fellow at the [Millennium Institute of Oceanography](http://en.imo-chile.cl/), Chile. I use experimental methods and in-situ measurements to investigate the responses of algae to stressful environments, and to calssify and quantify phytoplankton assemblages.
 
 ## Projects
 
