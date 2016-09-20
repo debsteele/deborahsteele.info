@@ -8,6 +8,16 @@ default:
         # For RSS feeds
         title: 'Deborah Steele'
         author: 'Deborah Steele'
+        menu_links:
+            -
+                title: Current Projects
+                link: /current-projects
+            -
+                title: Past Projects
+                link: /past-projects
+            -
+                title: CV
+                link: /professional-activities
     page_defaults:
         -
             pattern: ["*.{md,html}", "**/*.{md,html}"]

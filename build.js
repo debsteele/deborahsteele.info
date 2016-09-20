@@ -14,7 +14,13 @@ const permalinks = require('metalsmith-permalinks');
 const yaml_config = require('node-yaml-config');
 
 // local packages
-const css_csum = require('./modules/metalsmith_css_csum');
+const css_csum = require('./modules/metalsmith/css_csum');
+
+const handlebars_helpers = {
+    condition : require('./modules/handlebars/condition'),
+    head_title: require('./modules/handlebars/head_title'),
+    moment    : require('./modules/handlebars/moment')
+};
 
 
 var config = yaml_config.load(path.join(__dirname, '/config.yml'));
@@ -41,9 +47,7 @@ metalsmith(__dirname)
         engine   : 'handlebars',
         directory: 'layouts',
         partials : 'layouts/partials',
-        helpers  : {
-            head_title: () => config.site.title
-        }
+        helpers  : handlebars_helpers
     }))
     .use(permalinks({
         relative: false
