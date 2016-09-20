@@ -28,7 +28,15 @@ metalsmith(__dirname)
     })
     .use(default_values(config.page_defaults))
     .use(css_csum('scss.csum'))
-    .use(markdown())
+    .use(markdown({
+        gfm        : true,
+        tables     : true,
+        breaks     : true,
+        pedantic   : false,
+        sanitize   : false,
+        smartLists : true,
+        smartypants: true
+    }))
     .use(layouts({
         engine   : 'handlebars',
         directory: 'layouts',
