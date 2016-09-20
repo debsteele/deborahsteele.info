@@ -2,15 +2,14 @@
 title: Welcome
 
 ---
-I am a **marine microbiologist**, **LC-MS specialist** and **algae enthusiast**. Currently a postdoctoral fellow at the [Millennium Institute of Oceanography](http://en.imo-chile.cl/), Chile. I use experimental methods and in-situ measurements to investigate the responses of algae to stressful environments, and to calssify and quantify phytoplankton assemblages.
+I am a [**marine microbiologist**](/marine-microbiology), [**LC-MS specialist**](/LC-MS) and [**algae enthusiast**](/algae). Currently a postdoctoral fellow at the [Millennium Institute of Oceanography](http://en.imo-chile.cl/), Chile. I use experimental methods and in-situ measurements to investigate the responses of algae to stressful environments, and to calssify and quantify phytoplankton assemblages.
 
-## Current Projects
-This is the gist - for details see the dedicated project pages.
+## Projects
 
 ### Phytoplankton of the South Pacific
 *Principal Investigator*, 2015-2016
 
-I have set-up a facility for **HPLC/MS** analyses of algal **photosynthetic pigments**, at the Chemistry Laboratory of Natural Products, at the University of Concepcion, Chile - the first in Chile! (Correct me if I'm wrong).
+I have set-up a facility for **HPLC/MS** analyses of algal **photosynthetic pigments**, at the Chemistry Laboratory of Natural Products, at the University of Concepcion, Chile.
 
 After gathering marine samples from a transect from the Chilean Coast to Rapanui (Easter Island) and around the Juan Fernandez seamounts, I'm assessing phytoplanktin **community structures** using chemotaxonomy (CHEMTAX).
 
